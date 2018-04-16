@@ -27,7 +27,7 @@ class DayWeatherCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func update(with dailyForecast: WeatherLocation.DailyForcast, timeZone: String) {
+    func update(with dailyForecast: WeatherDetail.DailyForcast, timeZone: String) {
         dayCellIcon.image = UIImage(named: dailyForecast.dailyIcon)
         dayCellSummary.text = dailyForecast.dailySummary
         dayCellMaxTemp.text = String(format: "%2.f", dailyForecast.dailyMaxTemp) + "°"

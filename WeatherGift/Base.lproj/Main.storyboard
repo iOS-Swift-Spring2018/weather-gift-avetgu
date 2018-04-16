@@ -1,28 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gce-c2-Nk0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gce-c2-Nk0">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Avenir.ttc">
-            <string>Avenir-Book</string>
-        </array>
-        <array key="AvenirNext.ttc">
-            <string>AvenirNext-DemiBold</string>
-            <string>AvenirNext-Regular</string>
-        </array>
-        <array key="AvenirNextCondensed.ttc">
-            <string>AvenirNextCondensed-Bold</string>
-            <string>AvenirNextCondensed-DemiBold</string>
-            <string>AvenirNextCondensed-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
+        <!--AboutVC-->
+        <scene sceneID="Bhj-wn-WXL">
+            <objects>
+                <viewController id="C3n-sz-d0E" customClass="AboutVC" customModule="WeatherGift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Ar-Me-4dk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7II-HF-7ua">
+                                <rect key="frame" x="16" y="630" width="37" height="30"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="C3n-sz-d0E" eventType="touchUpInside" id="h6o-nV-RCy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WeatherGift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6T-0d-2ky">
+                                <rect key="frame" x="141" y="105" width="93" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made by Avery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bfp-4W-My6">
+                                <rect key="frame" x="131" y="363" width="113" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="powered by Google" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sC-Ex-NBM">
+                                <rect key="frame" x="210" y="429" width="149" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2zb-xK-Cwr">
+                                <rect key="frame" x="67" y="197" width="240" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered by Dark Sky" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCR-4D-RND">
+                                <rect key="frame" x="16" y="429" width="163" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UCR-4D-RND" firstAttribute="leading" secondItem="8Ar-Me-4dk" secondAttribute="leadingMargin" id="0do-x5-1Hk"/>
+                            <constraint firstItem="2zb-xK-Cwr" firstAttribute="leading" secondItem="8oK-x3-9xL" secondAttribute="leading" constant="67" id="5qw-Cs-z6N"/>
+                            <constraint firstItem="q6T-0d-2ky" firstAttribute="centerX" secondItem="2zb-xK-Cwr" secondAttribute="centerX" id="6em-yQ-YpB"/>
+                            <constraint firstItem="2zb-xK-Cwr" firstAttribute="centerX" secondItem="Bfp-4W-My6" secondAttribute="centerX" id="8Wt-AR-tAh"/>
+                            <constraint firstItem="8oK-x3-9xL" firstAttribute="bottom" secondItem="7II-HF-7ua" secondAttribute="bottom" constant="7" id="DXp-bd-e9n"/>
+                            <constraint firstItem="1sC-Ex-NBM" firstAttribute="trailing" secondItem="8Ar-Me-4dk" secondAttribute="trailingMargin" id="I35-DC-zKm"/>
+                            <constraint firstItem="UCR-4D-RND" firstAttribute="top" secondItem="Bfp-4W-My6" secondAttribute="bottom" constant="45" id="MBw-pH-2gb"/>
+                            <constraint firstItem="2zb-xK-Cwr" firstAttribute="top" secondItem="q6T-0d-2ky" secondAttribute="bottom" constant="71" id="MYw-Gl-mVT"/>
+                            <constraint firstItem="Bfp-4W-My6" firstAttribute="top" secondItem="2zb-xK-Cwr" secondAttribute="bottom" constant="38" id="R0r-cD-jlg"/>
+                            <constraint firstItem="UCR-4D-RND" firstAttribute="baseline" secondItem="1sC-Ex-NBM" secondAttribute="baseline" id="W99-J7-Uvj"/>
+                            <constraint firstItem="q6T-0d-2ky" firstAttribute="top" secondItem="8oK-x3-9xL" secondAttribute="top" constant="85" id="Z1s-OU-0I1"/>
+                            <constraint firstItem="8oK-x3-9xL" firstAttribute="bottom" secondItem="1sC-Ex-NBM" secondAttribute="bottom" constant="217" id="btL-ji-pDA"/>
+                            <constraint firstItem="UCR-4D-RND" firstAttribute="leading" secondItem="7II-HF-7ua" secondAttribute="leading" id="eLU-BX-ShG"/>
+                            <constraint firstItem="2zb-xK-Cwr" firstAttribute="centerX" secondItem="8Ar-Me-4dk" secondAttribute="centerX" id="pvt-g2-MnJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8oK-x3-9xL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M3S-Nu-oc4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-649" y="134"/>
+        </scene>
         <!--DetailVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -61,7 +117,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cloudy with a chance of meatballs" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcb-ll-E78">
-                                        <rect key="frame" x="174.5" y="161" width="200.5" height="64"/>
+                                        <rect key="frame" x="175" y="161" width="200" height="64"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -140,7 +196,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HourlyCell" id="2Xr-vH-sHH">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HourlyCell" id="2Xr-vH-sHH" customClass="HourlyWeatherCell" customModule="WeatherGift" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -185,6 +241,13 @@
                                                 </label>
                                             </subviews>
                                         </view>
+                                        <connections>
+                                            <outlet property="hourlyIcon" destination="ReV-l9-3af" id="3rD-LC-abH"/>
+                                            <outlet property="hourlyPrecipProb" destination="Q0k-sP-iHO" id="Sxe-Wn-waC"/>
+                                            <outlet property="hourlyTemp" destination="rYS-zP-PWa" id="pdC-QQ-Q16"/>
+                                            <outlet property="hourlyTime" destination="kg5-As-4yP" id="MtX-P2-OKe"/>
+                                            <outlet property="rainDropImage" destination="0w3-hL-cGA" id="781-Km-fMf"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -224,6 +287,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="gce-c2-Nk0" customClass="PageVC" customModule="WeatherGift" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="KBh-fp-wtb" kind="presentation" identifier="ToListVC" id="BFc-NI-jra"/>
+                        <segue destination="C3n-sz-d0E" kind="presentation" identifier="ToAboutVC" id="NUT-gF-7lD"/>
                     </connections>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eJy-a9-q29" userLabel="First Responder" sceneMemberID="firstResponder"/>
